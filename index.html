@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿联科技 - 专业数码配件</title>
+    <!-- 引入Bootstrap样式 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入Font Awesome图标 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- 引入ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 引入自定义样式 -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar py-2">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <span class="me-3"><i class="fas fa-phone-alt me-1"></i> 400-888-8888</span>
+                <span><i class="fas fa-envelope me-1"></i> service@lulian.cn</span>
+            </div>
+            <div>
+                <a href="javascript:void(0);" class="text-dark me-3" data-bs-toggle="modal" data-bs-target="#wechatModal">
+                    <i class="fab fa-weixin"></i>
+                </a>
+                <a href="https://weibo.com/luliankeji" target="_blank" class="text-dark me-3">
+                    <i class="fab fa-weibo"></i>
+                </a>
+                <a href="javascript:void(0);" target="_blank" class="text-dark">
+                    <i class="fab fa-douyin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 微信二维码弹窗 -->
+    <div class="modal fade" id="wechatModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="微信图标.png" alt="微信公众号" class="img-fluid">
+                    <p class="mt-2">扫描关注绿联公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主导航 -->
+    <nav class="navbar navbar-expand-lg navbar-light main-menu">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="绿联图像.png" alt="绿联logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.lulian.cn/intro/">关于绿联</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.lulian.cn/product/">产品中心</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.lulian.cn/download/">下载中心</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.lulian.cn/service/">服务支持</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.ugnas.com/">绿联NAS私有云</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://www.cninfo.com.cn/new/disclosure/stock?stockCode=301606&orgId=9900055793#latestAnnouncement">投资者关系</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="搜索产品..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://www.lulian.cn/product/1238.html" class="d-block">
+                    <img src="易烊千玺.jpg" class="d-block w-100 carousel-img" alt="绿联代言人易烊千玺">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.lulian.cn/product/1235.html" class="d-block">
+                    <img src="轮播2.jpg" class="d-block w-100 carousel-img" alt="绿联产品展示">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.lulian.cn/news/1831.html" class="d-block">
+                    <img src="轮播3.jpg" class="d-block w-100 carousel-img" alt="绿联新闻">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.lulian.cn/news/1872.html" class="d-block">
+                    <img src="轮播4.jpg" class="d-block w-100 carousel-img" alt="绿联活动">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.lulian.cn/product/1229.html" class="d-block">
+                    <img src="轮播5.jpg" class="d-block w-100 carousel-img" alt="绿联产品促销">
+                </a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+	
+	<!-- 热销产品板块 -->
+	<div class="container my-5">
+	    <div class="row">
+	        <!-- 左侧边栏 - 热销产品列表和图表 -->
+	        <div class="col-lg-3">
+	            <div class="card mb-4 shadow-sm">
+	                <div class="card-header bg-primary text-white">
+	                    <i class="fas fa-fire me-2"></i> 热销产品
+	                </div>
+	                <div class="card-body p-0">
+	                    <ul class="list-group list-group-flush" id="hotProductsList">
+	                        <!-- 产品列表将通过JS动态加载 -->
+	                    </ul>
+	                </div>
+	            </div>
+	            
+	            <!-- 热销趋势图 -->
+	            <div class="card mb-4 shadow-sm">
+	                <div class="card-header bg-info text-white">
+	                    <i class="fas fa-chart-line me-2"></i> 热销趋势
+	                </div>
+	                <div class="card-body p-3">
+	                    <div id="salesTrendChart" style="height: 250px;"></div>
+	                </div>
+	            </div>
+	            
+	            <!-- 销售占比图 -->
+	            <div class="card mb-4 shadow-sm">
+	                <div class="card-header bg-warning text-dark">
+	                    <i class="fas fa-chart-pie me-2"></i> 销售占比
+	                </div>
+	                <div class="card-body p-3">
+	                    <div id="salesPieChart" style="height: 250px;"></div>
+	                </div>
+	            </div>
+	        </div>
+	        
+	        <!-- 右侧主内容 - 热门产品展示 -->
+	        <div class="col-lg-9">
+	            <div class="d-flex justify-content-between align-items-center mb-4">
+	                <h2 class="mb-0">热门产品</h2>
+	                <a href="https://www.lulian.cn/product/" class="btn btn-outline-primary btn-sm">查看更多 <i class="fas fa-arrow-right ms-1"></i></a>
+	            </div>
+	            <div class="row">
+	                <div class="col-md-4 mb-4">
+	                    <div class="card product-card h-100">
+	                        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+	                        <img src="绿联DXP4800系列.jpg" class="card-img-top" alt="私有云">
+	                        <div class="card-body">
+	                            <h5 class="card-title">绿联DXP4800系列</h5>
+	                            <p class="card-text text-muted small">Inter8505处理器，万兆网口</p>
+	                            <div class="d-flex justify-content-between align-items-center">
+	                                <p class="text-danger fw-bold mb-0">¥2919</p>
+	                                <a href="https://www.lulian.cn/product/1232.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-4 mb-4">
+	                    <div class="card product-card h-100">
+	                        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+	                        <img src="户外电源.jpg" class="card-img-top" alt="储能电源">
+	                        <div class="card-body">
+	                            <h5 class="card-title">绿联户外电源</h5>
+	                            <p class="card-text text-muted small"></p>
+	                            <div class="d-flex justify-content-between align-items-center">
+	                                <p class="text-danger fw-bold mb-0">¥259</p>
+	                                <a href="https://www.lulian.cn/product/1014.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-4 mb-4">
+	                    <div class="card product-card h-100">
+	                        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+	                        <img src="蓝牙耳机.jpg" class="card-img-top" alt="蓝牙耳机">
+	                        <div class="card-body">
+	                            <h5 class="card-title">蓝牙耳机</h5>
+	                            <p class="card-text text-muted small">主动降噪，30小时续航</p>
+	                            <div class="d-flex justify-content-between align-items-center">
+	                                <p class="text-danger fw-bold mb-0">¥159</p>
+	                                <a href="https://www.lulian.cn/product/1235.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+					<div class="col-md-4 mb-4">
+					    <div class="card product-card h-100">
+					        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+					        <img src="无线充电宝.jpg" class="card-img-top" alt="绿联10000毫安苹果磁吸无线充电宝">
+					        <div class="card-body">
+					            <h5 class="card-title">绿联10000毫安苹果磁吸无线充电宝</h5>
+					            <p class="card-text text-muted small">稳定轻便，安全更护机</p>
+					            <div class="d-flex justify-content-between align-items-center">
+					                <p class="text-danger fw-bold mb-0">¥99</p>
+					                <a href="https://www.lulian.cn/product/1022.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-md-4 mb-4">
+					    <div class="card product-card h-100">
+					        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+					        <img src="绿联T6排插.jpg" class="card-img-top" alt="绿联T6排插">
+					        <div class="card-body">
+					            <h5 class="card-title">绿联T6  20W排插</h5>
+					            <p class="card-text text-muted small">创新不挡插头，过载安全保护</p>
+					            <div class="d-flex justify-content-between align-items-center">
+					                <p class="text-danger fw-bold mb-0">¥49.9</p>
+					                <a href="https://www.lulian.cn/product/1229.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-md-4 mb-4">
+					    <div class="card product-card h-100">
+					        <div class="badge bg-danger position-absolute" style="top: 10px; right: 10px;">热销</div>
+					        <img src="智充魔盒.png" class="card-img-top" alt="绿联智充魔盒30W">
+					        <div class="card-body">
+					            <h5 class="card-title">绿联智充魔盒30W</h5>
+					            <p class="card-text text-muted small">氮化镓黑科技，防雷抗浪涌</p>
+					            <div class="d-flex justify-content-between align-items-center">
+					                <p class="text-danger fw-bold mb-0">¥459</p>
+					                <a href="https://www.lulian.cn/product/918.html" class="btn btn-sm btn-outline-primary">查看详情</a>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+    <!-- 新闻板块 -->
+    <div class="news-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">新闻中心</h2>
+                <p class="text-muted">了解绿联最新动态和企业资讯</p>
+            </div>
+            
+            <div class="news-container">
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1913.html">
+                            <img src="AA评级.jpg" alt="绿联科技ESG报告获华证指数AA评级" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1913.html">绿联科技ESG报告获华证指数AA评级</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-06-20</p>
+                        <p class="news-excerpt">深圳市绿联科技股份有限公司（股票代码：301606）首次发布ESG报告，在2025年华证指数评级中以AA评级成为行业标杆...</p>
+                        <a href="https://www.lulian.cn/news/1913.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1911.html">
+                            <img src="618战报.jpg" alt="绿联618战报 - 聚焦品质 再创佳绩" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1911.html">绿联618战报 - 聚焦品质 再创佳绩</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-06-19</p>
+                        <p class="news-excerpt">2025年6月8日，绿联UMA5私有云多平台"销售服务"销量双居于强势领跑，全渠道销售额同比增长65%...</p>
+                        <a href="https://www.lulian.cn/news/1911.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1910.html">
+                            <img src="科技入选.jpg" alt="绿联科技（301606）入选深证成指样本股" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1910.html">绿联科技（301606）入选深证成指样本股</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-06-13</p>
+                        <p class="news-excerpt">2025年6月，深圳证券交易所公告深证成指样本调整。绿联科技（301606）正式调入深证成指样本股...</p>
+                        <a href="https://www.lulian.cn/news/1910.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1891.html">
+                            <img src="易烊千玺新闻.jpg" alt="联接此网！快来与易烊千玺同框" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1891.html">联接此网！快来与易烊千玺同框</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-05-22</p>
+                        <p class="news-excerpt">绿联携手全球品牌代言人易烊千玺，开展"惊喜联接"品牌活动。活动期间购买指定产品可获签名周边...</p>
+                        <a href="https://www.lulian.cn/news/1891.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1890.html">
+                            <img src="展会回顾.jpg" alt="展会回顾 - 绿联科技参展2025 CHINA P&E" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1890.html">展会回顾 - 绿联科技参展2025 CHINA P&E</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-05-19</p>
+                        <p class="news-excerpt">绿联科技携从NASA有云的前沿技术与创新产品，亮相中国国际照相机械影像器材与技术博览会...</p>
+                        <a href="https://www.lulian.cn/news/1890.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image-container">
+                        <a href="https://www.lulian.cn/news/1873.html">
+                            <img src="获奖AAA.jpg" alt="绿联荣获「AAA级别名商标品牌」" class="news-image">
+                        </a>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">
+                            <a href="https://www.lulian.cn/news/1873.html">绿联荣获「AAA级别名商标品牌」</a>
+                        </h3>
+                        <p class="news-date"><i class="far fa-calendar-alt me-1"></i> 2025-05-15</p>
+                        <p class="news-excerpt">绿联在中国市场协会2025届全国商标品牌奖项评选中获最高等级"AAA级别名商标品牌"认证...</p>
+                        <a href="https://www.lulian.cn/news/1873.html" class="news-link">查看详情 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- 页脚 -->
+   <footer class="footer bg-dark text-white py-5">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-6 mb-4">
+                   <h4 class="footer-title">联系我们</h4>
+                   <p class="text-muted">若您有产品使用疑问，可通过以下方式与我们联系</p>
+                   
+                   <div class="contact-info">
+                       <div class="d-flex mb-3">
+                           <i class="fas fa-building me-3 mt-1"></i>
+                           <div>
+                               <strong>深圳市绿联科技股份有限公司</strong><br>
+                               地址：深圳市龙华区龙城高新区仙田路东三栋绿联办公楼
+                           </div>
+                       </div>
+                       <div class="d-flex mb-3">
+                           <i class="fas fa-phone-alt me-3 mt-1"></i>
+                           <div>
+                               电话：0755-28066995<br>
+                               传真：0755-28066815<br>
+                               邮编：518131
+                           </div>
+                       </div>
+                       <div class="d-flex mb-3">
+                           <i class="fas fa-store me-3 mt-1"></i>
+                           <div>
+                               商城：<a href="https://greenconnection.tmall.com/" target="_blank">天猫绿联旗舰店</a> | 
+                               <a href="https://ugreen.jd.com/" target="_blank">京东绿联旗舰店</a> | 
+                               <a href="https://mobile.yangkeduo.com/mall_page.html?mall_id=423898354" target="_blank">拼多多绿联旗舰店</a>
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <h5 class="mt-4 mb-3">留言板</h5>
+                   <form id="contactForm">
+                       <div class="row mb-3">
+                           <div class="col-md-6 mb-3 mb-md-0">
+                               <input type="text" class="form-control" placeholder="联系人" required>
+                           </div>
+                           <div class="col-md-6">
+                               <input type="tel" class="form-control" placeholder="电话" required>
+                           </div>
+                       </div>
+                       <div class="mb-3">
+                           <input type="email" class="form-control" placeholder="Email" required>
+                       </div>
+                       <div class="mb-3">
+                           <input type="text" class="form-control" placeholder="主题" required>
+                       </div>
+                       <div class="mb-3">
+                           <textarea class="form-control" rows="3" placeholder="请详细描述内容" required></textarea>
+                       </div>
+                       <div class="d-flex align-items-center">
+                           <input type="text" class="form-control captcha-input me-3" placeholder="验证码" required>
+                           <button type="submit" class="btn btn-primary flex-grow-1">提交留言</button>
+                       </div>
+                   </form>
+               </div>
+               
+               <div class="col-lg-6">
+                   <div class="row">
+                       <div class="col-md-6 mb-4">
+                           <h5 class="footer-title">快速链接</h5>
+                           <ul class="list-unstyled">
+                               <li class="mb-2"><a href="index.html"><i class="fas fa-angle-right me-2"></i> 首页</a></li>
+                               <li class="mb-2"><a href="products.html"><i class="fas fa-angle-right me-2"></i> 产品中心</a></li>
+                               <li class="mb-2"><a href="download.html"><i class="fas fa-angle-right me-2"></i> 下载中心</a></li>
+                               <li class="mb-2"><a href="service.html"><i class="fas fa-angle-right me-2"></i> 服务支持</a></li>
+                               <li class="mb-2"><a href="news.html"><i class="fas fa-angle-right me-2"></i> 新闻中心</a></li>
+                           </ul>
+                       </div>
+                       <div class="col-md-6 mb-4">
+                           <h5 class="footer-title">友情链接</h5>
+                           <ul class="list-unstyled">
+                               <li class="mb-2"><a href="https://www.lulian.cn/hitune-max/"><i class="fas fa-angle-right me-2"></i> 蓝牙耳机</a></li>
+                               <li class="mb-2"><a href="https://www.lulian.cn/sitemap/"><i class="fas fa-angle-right me-2"></i> 网站地图</a></li>
+                               <li class="mb-2"><a href="https://www.ugnas.com/"><i class="fas fa-angle-right me-2"></i> 绿联私有云</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                   
+                   <div class="row">
+                       <div class="col-md-6 mb-4">
+                           <h5 class="footer-title">关注我们</h5>
+                           <div class="d-flex">
+                               <a href="#" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#wechatModal">
+                                   <i class="fab fa-weixin"></i>
+                               </a>
+                               <a href="https://weibo.com/luliankeji" target="_blank" class="btn btn-outline-light me-2">
+                                   <i class="fab fa-weibo"></i>
+                               </a>
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <div class="mt-4 pt-4 border-top border-secondary">
+                       <p class="text-center text-muted mb-2">
+                           Copyright © 2025 UGREEN绿联 | 
+                           <a href="https://beian.miit.gov.cn/" target="_blank" class="text-muted">粤ICP备12028979号</a> | 
+                           <a href="https://www.lulian.cn/news/726-cn.html" target="_blank" class="text-muted">隐私政策</a>
+                       </p>
+                       <p class="text-center text-muted mb-0">Powered by UGREEN绿联</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </footer>
+    <!-- 引入Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 引入jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入自定义JS -->
+    <script src="script.js"></script>
+</body>
+</html>
